@@ -451,6 +451,25 @@ if st.session_state.get("sudah_hitung"):
             if ada_perubahan:
                 st.session_state.df_pelunasan = df_edit_tf
                 st.rerun()
+            # --- PANTAUAN PENGEMBALIAN DANA TALANGAN ---
+    st.markdown("#### 💰 Pantauan Pengembalian Uang Talangan")
+    penerima_unik = df_edit_tf["Penerima"].unique()
+    for p_nama in penerima_unik:
+        df_penerima = df_edit_tf[df_edit_tf["Penerima"] == p_nama]
+        total_harus_kembali = df_penerima["Tagihan (Rp)"].sum()
+        total_sudah_kembali = df_penerima["Sudah Dibayar (Rp)"].sum()
+        sisa_belum_kembali = max(0, total_harus_kembali - total_sudah_kembali)
+
+        st.write(f"**Penerima Talangan: {p_nama}**")
+        c_t1, c_t2, c_t3 = st.columns(3)
+        c_t1.metric("Harus Kembali", f"Rp {total_harus_kembali:,.0f}")
+        c_t2.metric("Sudah Masuk", f"Rp {total_sudah_kembali:,.0f}")
+        c_t3.metric("Kurang / Belum Kembali", f"Rp {sisa_belum_kembali:,.0f}")
+
+        if sisa_belum_kembali == 0 and total_harus_kembali > 0:
+            st.success(f"🎉 Semua uang talangan milik **{p_nama}** sudah lunas dikembalikan!")
+        elif sisa_belum_kembali > 0:
+            st.warning(f"⏳ Masih kurang **Rp {sisa_belum_kembali:,.0f}** yang belum ditransfer ke **{p_nama}**.")
         else:
             st.success("Semua tagihan sudah pas dan lunas!")
             ringkasan_status = ()
