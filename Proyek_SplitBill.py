@@ -103,7 +103,7 @@ div[data-baseweb="input"] > div, div[data-baseweb="select"] > div {
 <div class="boneka-bawah" style="position: fixed; bottom: 18px; left: 22px; font-size: 62px; z-index: 99; pointer-events: none; filter: drop-shadow(2px 4px 6px rgba(214,28,122,0.25)); transform: rotate(-8deg);">🧸</div>
 <div class="boneka-bawah" style="position: fixed; bottom: 18px; right: 22px; font-size: 62px; z-index: 99; pointer-events: none; filter: drop-shadow(2px 4px 6px rgba(214,28,122,0.25)); transform: rotate(8deg);">🐰</div>
 <div class="boneka-atas" style="position: fixed; top: 75px; left: 10px; font-size: 54px; z-index: 99; pointer-events: none; filter: drop-shadow(2px 4px 6px rgba(214,28,122,0.22)); transform: rotate(-10deg);">🐱</div>
-<div class="boneka-atas" style="position: fixed; top: 75px; right: 10px; font-size: 54px; z-index: 99; pointer-events: none; filter: drop-shadow(2px 4px 6px rgba(214,28,122,0.22)); transform: rotate(10deg);">🐼</div>
+
 <div class="boneka-atas" style="position: fixed; top: 75px; right: 6px; font-size: 54px; z-index: 99; pointer-events: none; filter: drop-shadow(2px 4px 6px rgba(214,28,122,0.22)); transform: rotate(10deg);">🐼</div>
 <!-- Banner Utama: Rangkaian Rapat & Ekstra Tebal -->
 <div style="background: linear-gradient(135deg, #FF758F 0%, #FF9EBB 50%, #FF5C8A 100%); padding: 28px 20px; border-radius: 28px; text-align: center; margin-bottom: 24px; border: 4px solid #FFFFFF; box-shadow: 0px 8px 20px rgba(255, 92, 138, 0.38);">
