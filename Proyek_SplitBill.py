@@ -412,7 +412,7 @@ if st.session_state.get("sudah_hitung"):
                         required=True
                     ),
                     "Waktu / Catatan": st.column_config.TextColumn("Waktu / Catatan", help="Isi tanggal/jam bayar atau biarkan '-'"),
-                    "Status Pelunasan": st.column_config.TextColumn("Status Pelunasan (Otomatis)")
+                    "Status Pelunasan": st.column_config.TextColumn("Status Pelunasan (Otomatis)", width="large")
                 },
                 disabled=("Pengirim", "Penerima", "Tagihan (Rp)", "Status Pelunasan"),
                 use_container_width=True,
